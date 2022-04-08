@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/contact_us', [TaskController::class, 'index']);
+Route::get('/contact_us/{id}', [TaskController::class, 'show']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Route::get('/about', function () {
@@ -37,22 +56,22 @@ Route::get('/', function () {
 //     ]);
 // });
 
-Route::get('about', function () {
+// Route::get('about', function () {
 
-    return view('about');
-});
-Route::post('about', function () {
+//     return view('about');
+// });
+// Route::post('about', function () {
 
-    return view('about');
-});
-Route::get('show', function () {
-    $tasks = [
-        'task1',
-        'task2',
-        'task3'
-    ];
-    return view('show',compact('tasks'));
-});
+//     return view('about');
+// });
+// Route::get('show', function () {
+//     $tasks = [
+//         'task1',
+//         'task2',
+//         'task3'
+//     ];
+//     return view('show',compact('tasks'));
+// });
 
 // Route::get('about/task/{id}', function ($id) {
 //     $tasks = [

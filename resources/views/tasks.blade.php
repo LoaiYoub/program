@@ -7,10 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<ul>
-    @foreach ($tasks as $key=>$task )
-    <li><a href="{{'about/task/'.$key+1}}"><?php echo $task ?></a></li>
-    @endforeach
-</ul>
+<h1>{{$tasks->name}}</h1>
 </body>
 </html>
